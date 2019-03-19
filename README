@@ -1,0 +1,17 @@
+John Pyeatt jopy7520@colorado.edu
+my helloworld.c and cs3753_add.c file is located in home/kernel/linux-hwe-4.15.0/arch/x86/kernel
+helloworld.c is the system call given to us in the writeup.
+cs3753_add.c is the add system call. This file takes in 3 longs, one of them is a pointer. This file just adds the numbers puts them in userspace and then prints to the kernel.
+
+hello_test.c is the call to the system call. This just calls the system call to run it and print that it ran.
+cs3753_add_test.c is the call to the system call for the add function.
+
+syscall_64.tbl: This is the file where the location of the system calls are. for example the location for the helloworld is 333.
+
+
+hello_test.c and hello_test.o are located in home/kernel/linux-hwe-4.15.0
+cs3753_add_test.c is located in home/user/Documents
+
+to run my come first i ran "sudo gcc -o hello_test hello_test.c". Then i would run "./hello_test" to exicute the object file. To check to see if it printed to the kernel I ran "dmesg" to check all the kernel writes.
+To run the add function I ran the "gcc -o stest cs3753_add_test.c". Then I would run "./stest".
+
